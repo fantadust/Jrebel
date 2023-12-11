@@ -9,17 +9,19 @@
         <relativePath/>
     </parent>
 
-
     <groupId>com.github</groupId>
     <artifactId>jrebel</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <name>jrebel</name>
+    <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
+        <source.level>21</source.level>
+        <target.level>21</target.level>
     </properties>
 
     <dependencies>
@@ -66,7 +68,6 @@
         </dependency>
 
 
-
     </dependencies>
 
     <repositories>
@@ -86,10 +87,12 @@
     </repositories>
 
     <build>
+        <finalName>JrebelLicenseServer</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.1.4</version>
             </plugin>
         </plugins>
     </build>
