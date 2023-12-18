@@ -48,5 +48,10 @@ public class JrebelController {
         jrebelService.jrebelValidateHandler(request, response);
     }
 
+    @RequestMapping("/agent/features")
+    public void features(HttpServletRequest request, HttpServletResponse response) {
+        log.info("agent/features : {} ", IPUtil.getRemoteIp(request) + " -> " + request.getRequestURI());
+        jrebelService.jrebelLeases1Handler(request, response);
+    }
 
 }
